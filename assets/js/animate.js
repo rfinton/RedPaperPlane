@@ -116,6 +116,7 @@ $(document).ready(function() {
       flexDirection: 'column',
       justifyContent: 'center'
     });
+    scrollTo(0,0);
     $('#mobile-scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
   }
   
