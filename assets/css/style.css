@@ -63,20 +63,8 @@ h1, h2, h3, .h1, .h2, .h3 {
 
 #rppSamples {
   margin-top: 60px;
-  margin-bottom: 60px;}
-#s1 {background-image: url('../img/Direct Mail/10000-7547_Comp(1).jpg');}
-#s2 {background-image: url('../img/Direct Mail/10000-8560_04.jpg');}
-#s3 {background-image: url('../img/Pop Ups/2918-021_12(2).jpg');}
-#s4 {background-image: url('../img/Pop Ups/10000-7345_3(1).jpg');}
-#s5 {background-image: url('../img/Promotional Packaging/2917-464_60(2).jpg');}
-#s6 {background-image: url('../img/Promotional Packaging/10000-7974_Comp.jpg');}
-#s7 {background-image: url('../img/Video/10000-7151_4(1).jpg');}
-#rppSamples .row div {
-  height: 320px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;}
-
+  margin-bottom: 60px;
+}
 
 .buttons {
   margin-top: 60px;
