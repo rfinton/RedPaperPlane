@@ -96,6 +96,7 @@ $(document).ready(function() {
   
   function mobileScene6() {
     console.log('running scene 6');
+    scrollTo(0,0);
     $('#mobile-scene-5').css('display', 'none');
     $('#mobile-scene-6').css({
       opacity: 0,
@@ -104,7 +105,6 @@ $(document).ready(function() {
       flexDirection: 'column',
       justifyContent: 'center'
     });
-    scrollTo(0,0);
     $('#mobile-scene-6').velocity({ opacity: [1,0] }, { duration: 1000 });
   }
   
