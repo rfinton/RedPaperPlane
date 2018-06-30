@@ -7,14 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <style>@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');</style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://s3.amazonaws.com/redpaperplane/assets/css/style.css">
-    <link rel="stylesheet" href="https://s3.amazonaws.com/redpaperplane/assets/css/mobile.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/redpaperplane/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/redpaperplane/assets/css/style.css">
     <script>
       (function() {
         var h = innerHeight;
-        console.log(h);
         var styleTag = document.createElement('style');
         styleTag.innerHTML = 'body { min-height:' + h + 'px; }';
         document.head.appendChild(styleTag);
@@ -22,181 +19,182 @@
     </script>
     <style>
       div h2 {
-        text-transform:uppercase; 
-        text-align:center; 
-        font-weight:bold; 
-        font-size:2em; 
-        margin-top:30px;}
+        text-transform: uppercase; 
+        text-align: center; 
+        font-weight: bold; 
+        font-size: 2em; 
+        margin-top: 30px; }
       div h2.fn.##purl## {
-        text-transform:uppercase; 
-        text-align:center; 
-        font-weight:bold; 
-        font-size:2em; 
-        margin-top:30px;}
-      .fn {display:none;}
-      .##purl## {display:block;}
+        text-transform: uppercase; 
+        text-align: center; 
+        font-weight: bold; 
+        font-size: 2em; 
+        margin-top: 30px; }
+      .fn { display: none; }
+      .##purl## { display: block; }
       #tagline {
-        text-transform:uppercase; 
-        text-align:center; 
-        font-weight:bold; 
-        font-size:2em; 
-        color:rgb(236, 33, 39);}
-      #mobile-scene-5 img {
-        width: 100%;}
-      #smm {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        padding: 30px 0;}
+        text-transform: uppercase; 
+        text-align: center; 
+        font-weight: bold; 
+        font-size: 2em; 
+        color: rgb(236, 33, 39); }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119536189-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-119536189-1');
+    </script>
   </head>
   <body>
-    <div class="container">
-
-      <div id="spectacle">
-
-        <div id="scene-1">
-          <img 
-            width="487" 
-            height="233" 
-            src="http://s3.amazonaws.com/redpaperplane/assets/img/rppLogoHorizontalNoPlane.svg" 
-            id="rpplogo">
-          
-          <img 
-            width="110" 
-            height="77" 
-            src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneTakeOff.svg" 
-            id="plane-1">
-        </div>
-        
+    <div class="view">
+      <div id="scene-1">
         <div>
-          <h2 class="fn ##purl##">##firstname##,</h2>
-          <h2>let your marketing soar!</h2>
+          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/rppLogoHorizontalNoPlane.svg" id="horiz-rpplogo">
+          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/rppLogoVertNoPlane.svg" id="vert-rpplogo">
+          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneTakeOff.svg" id="plane">
         </div>
-        
-        <div id="scene-2">
-          <img 
-            width="110" 
-            height="77" 
-            src="http://s3.amazonaws.com/redpaperplane/assets/img/landingShadow.png" 
-            id="shadow-2">
-          <img 
-            width="110" 
-            height="77" 
-            src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneLanding.svg" 
-            id="plane-2">
-        </div>
+        <h1 class="fn ##purl##">##firstname##...</h1>
       </div>
 
-      <p style="color:rgb(92, 184, 178);">3-dimensional direct mail is taking the marketing world by storm. With attention grabbing features for both current and prospective clients, it produces high-flying results and ROI of your marketing dollars.</p>
+      <div id="scene-2">LET YOUR</div>
+      
+      <div id="scene-3">MARKETING</div>
+      
+      <div id="scene-4">SOAR!<br>
+        <img src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneLanding.svg">
+      </div>
+      
+      <div id="scene-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-7547_Comp(1).jpg">
+            <p><label>Web Key Brochure</label><br>Resembling a USB flash drive, a web key is also inserted into a computer port. Once inserted, a web key automatically launches a browser to take the user to a predefined website or landing page. In function, convenience, and accuracy, web keys are the printed equivalent of a hyperlink.</p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/10000-7345_3(1).jpg">  
+            <p><label>3" Pop Up Cube Self Mailer</label><br>Highly effective dimensional mailer. Mails as flat-mail and pops open when unsealed. Fun and cost effective. A special semi-gloss UV coating is applied that both enhances the quality of printing and acts as a protective layer.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-7383_Comp.jpg">
+            <p><label>Exploding Page</label><br>Folded inset explodes into large poster. Great for presenting printed maps. Easily folds down for compact usage. Simple but effective layout for design which is useful for a variety of projects. High quality and durability.</p>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-8560_04.jpg">
+            <p><label>SleekPeeks VR Viewer</label><br>Single piece, easy to assemble viewer pops together in seconds. Can be produced as a handout, magazine insert, or mailed in custom sleeve at standard postal rates.</p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/2917-464_60(2).jpg">  
+            <p><label>Fall Away Box</label><br>Excellent choice for promotional items. Built to endure heavy postage handling. Easy to design template to unleash your creative potential. A high-end piece that stands out from the rest of the mail.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/2918-021_12(2).jpg">  
+            <p><label>Surprise Slider</label><br>The layout of the Surprise Slider provides plenty of space for content on the box sleeve and, the inside pull out and both pop up cubes. The box is rigid with EPS FOAM inside so it's a self-mailing piece.  No need for an outer box.</p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/10000-7974_Comp.jpg">  
+            <p><label>Well Box</label><br>Sturdy design opens endless possibilities for promotional items. The layout of the Welled Box provides plenty of space for content. Insert any marketing collateral or promotional product that fits within the 6.75" X 4.218" size well.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-7151_4(1).jpg">  
+            <p><label>Video Screen - Center Reveal</label><br>Sliding brochure with half-split sleeve pulls open to reveal built-in video which plays automatically. 95MB of video storage available. Deliver your message with dramatic video and sound!</p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img src="http://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-8349_05.jpg">  
+            <p><label>Video Screen - Telescoping Slider</label><br>Single sleeve slides open a video screen. Looks great. Bring the moment to life with your message in a video file &mdash; a powerful combination!</p>
+          </div>
+        </div>
+        
+        <div id="smm">Tell Me More</div>
+        <p class="scroll">scroll down<br><span class="glyphicon glyphicon-menu-down"></span></p>
+      </div>
+      
+      <div id="scene-6">
+        <div class="bars" id="bar-1">
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+        </div>
 
-      <p style="color:rgb(92, 184, 178);">Your competitors are looking to attract the same best prospects you are. Make sure your message stands out with engaging interactive direct mail from Red Paper Plane. Our dimensional designs steal attention from the traditional flat materials everyone else is using, making yours the business that is identified, remembered and chosen.</p>
+        <p style="color:rgb(92, 184, 178); font-size:1.5em; padding:30px 30px 0; font-weight:normal; text-align:left;">3-dimensional direct mail is taking the marketing world by storm. With attention grabbing features for both current and prospective clients, it produces high-flying results and ROI of your marketing dollars.</p>
 
-      <div id="rppSamples">
-        <div class="row">
-          <div class="col-xs-12 col-sm-4" id="s1"></div>
-          <div class="col-xs-12 col-sm-4" id="s2"></div>
-          <div class="col-xs-12 col-sm-4" id="s3"></div>
-        </div>
-        <div class="row">
-          <img style="width:100%;" src="https://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-7383_Comp.jpg">
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6" id="s4"></div>
-          <div class="col-xs-12 col-sm-6" id="s5"></div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-7" id="s6"></div>
-          <div class="col-xs-12 col-sm-5" id="s7"></div>
+        <p style="color:rgb(92, 184, 178); font-size:1.5em; padding:30px 30px 0; font-weight:normal; text-align:left;">Your competitors are looking to attract the same best prospects you are. Make sure your message stands out with engaging interactive direct mail from Red Paper Plane. Our dimensional designs steal attention from the traditional flat materials everyone else is using, making ##company##, remembered and chosen in the ##industry## industry.</p>
+        
+        <p id="explore" style="padding:30px; font-size:3em; color:rgb(236, 33, 39);">
+          <span>Show Me &#9654;</span>
+        </p>
+
+        <div class="bars" id="bar-2">
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
+          <div class="white-bar"></div>
+          <div class="blue-bar"></div>
+          <div class="white-bar"></div>
+          <div class="red-bar"></div>
         </div>
       </div>
-
-      <p style="color:rgb(92, 184, 178);">Click below to see a few of the exciting new products Red Paper Plane has to offer because</p>
-
-      <p id="tagline">red always stands out!</p>
-
-      <p style="color:rgb(92, 184, 178);">Save $300 on your next personalized mailer when you choose Red Paper Plane. <span style="font-weight:800;">Act now!</span></p>
-
-      <div class="row buttons">
-        <div class="col-xs-12 col-sm-4">
-          <a href="https://www.redpaperplane.com/store/creative-direct-mail/pop-up-mailers" target="_blank" class="btn btn-default">POP UP<br>MAILERS</a>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <a href="https://www.redpaperplane.com/store/creative-direct-mail/custom-promotional-boxes" target="_blank" class="btn btn-default">PROMOTIONAL<br>BOXES</a>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <a href="https://www.redpaperplane.com/store/creative-direct-mail/video-brochures" target="_blank" class="btn btn-default">CUSTOM VIDEO<br>BROCHURES</a>
-        </div>
-      </div>
-
-    </div>
-    
-    
-    <div class="mobile">
-      <div id="mobile-spectacle">
+      
+      <div id="scene-7">
+        <p style="color:rgb(92, 184, 178);">Save $300 on your next personalized mailer when you choose Red Paper Plane. 
+          <span style="font-weight:800;">Act now!</span>
+        </p>
+        <p>RED ALWAYS<br>STANDS OUT!</p>
         
-        <div id="mobile-scene-1">
-          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/rppLogoHorizontalNoPlane.svg" id="mobile-horiz-rpplogo">
-          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/rppLogoVertNoPlane.svg" id="mobile-vert-rpplogo">
-          <h1>##firstname##...</h1>
-          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneTakeOff.svg" id="mobile-plane">
-        </div>
-
-        <div id="mobile-scene-2">LET YOUR</div>
+        <div class="buttons">
+          <div>
+            <a href="https://www.redpaperplane.com/store/creative-direct-mail/pop-up-mailers" target="_blank">POP UP<br>MAILERS</a>
+          </div>
         
-        <div id="mobile-scene-3">MARKETING</div>
+          <div>
+            <a href="https://www.redpaperplane.com/store/creative-direct-mail/custom-promotional-boxes" target="_blank">PROMOTIONAL<br>BOXES</a>
+          </div>
         
-        <div id="mobile-scene-4">SOAR!<br>
-          <img src="http://s3.amazonaws.com/redpaperplane/assets/img/redPlaneLanding.svg">
-        </div>
-        
-        <div id="mobile-scene-5">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-7547_Comp(1).jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-7383_Comp.jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Direct Mail/10000-8560_04.jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/2918-021_12(2).jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/10000-7345_3(1).jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/2917-464_60(2).jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/10000-7974_Comp.jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-7151_4(1).jpg">
-          <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-8349_05.jpg">
-          <div id="smm">Show Me More</div>
-        </div>
-        
-        <div id="mobile-scene-6">
-          <p style="color:rgb(92, 184, 178); font-size:1.5em; padding:30px 30px 0; font-weight:normal; text-align:left;">3-dimensional direct mail is taking the marketing world by storm. With attention grabbing features for both current and prospective clients, it produces high-flying results and ROI of your marketing dollars.</p>
-
-          <p style="color:rgb(92, 184, 178); font-size:1.5em; padding:30px 30px 0; font-weight:normal; text-align:left;">Your competitors are looking to attract the same best prospects you are. Make sure your message stands out with engaging interactive direct mail from Red Paper Plane. Our dimensional designs steal attention from the traditional flat materials everyone else is using, making yours the business that is identified, remembered and chosen.</p>
-          
-          <p id="explore" style="text-align:right; padding-right:20px; font-size:1.5em; color:rgb(236, 33, 39);">Explore <span class="glyphicon glyphicon-arrow-right"></span></p>
-        </div>
-        
-        <div id="mobile-scene-7">
-          <p style="color:rgb(92, 184, 178);">Save $300 on your next personalized mailer when you choose Red Paper Plane. <span style="font-weight:800;">Act now!</span></p>
-          <p>RED ALWAYS<br>STANDS OUT!</p>
-          
-          <div class="row buttons">
-            <div class="col-xs-12 col-sm-4">
-              <a href="https://www.redpaperplane.com/store/creative-direct-mail/pop-up-mailers" target="_blank" class="btn btn-default">POP UP<br>MAILERS</a>
-            </div>
-          
-            <div class="col-xs-12 col-sm-4">
-              <a href="https://www.redpaperplane.com/store/creative-direct-mail/custom-promotional-boxes" target="_blank" class="btn btn-default">PROMOTIONAL<br>BOXES</a>
-            </div>
-          
-            <div class="col-xs-12 col-sm-4">
-              <a href="https://www.redpaperplane.com/store/creative-direct-mail/video-brochures" target="_blank" class="btn btn-default">CUSTOM VIDEO<br>BROCHURES</a>
-            </div>
+          <div>
+            <a href="https://www.redpaperplane.com/store/creative-direct-mail/video-brochures" target="_blank">CUSTOM VIDEO<br>BROCHURES</a>
           </div>
         </div>
       </div>
     </div>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://s3.amazonaws.com/redpaperplane/assets/js/animate.js"></script>
+    <script src="http://s3.amazonaws.com/redpaperplane/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://s3.amazonaws.com/redpaperplane/node_modules/velocity/velocity.min.js"></script>
+    <script src="http://s3.amazonaws.com/redpaperplane/node_modules/velocity/velocity.ui.min.js"></script>
+    <script src="http://s3.amazonaws.com/redpaperplane/assets/js/animate.js"></script>
   </body>
 </html>
