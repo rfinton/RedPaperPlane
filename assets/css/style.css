@@ -1,91 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
 body {
   background: linear-gradient(rgb(141, 200, 232), rgb(230, 234, 236), white, white);
-  overflow-x: hidden;
-}
-
+  background-repeat: no-repeat;
+  margin: 0; }
 * {
-  font-family: 'Raleway', sans-serif; 
-}
-
+  font-family: 'Raleway', sans-serif; }
 h1, h2, h3, .h1, .h2, .h3 { 
-  color: rgb(236, 33, 39); 
-}
+  color: rgb(236, 33, 39); }
 
-.mobile {
-  display: none;
-}
+.view {
+  height: 100%;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center; }
 
-.container {
-  background-color: white;
-  font-size: 1.5em;
-  width: 1024px;
-  margin: 0 auto;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 120px;
-}
+h1 {
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+  width: 100%; }
 
 #scene-1 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  height: 280px;
-}
-
-#rpplogo {
-  display: flex;
-  justify-self: flex-start;
-  align-self: flex-end;
-}
-
-#plane-1 {
-  margin-top: 40px;
-  margin-left: -107px;
-}
-
-#plane-2 {
-  display: none;
-  position: absolute;
-  bottom: 30px;
-  left: 397px;
-}
-
-#shadow-2 {
-  display: none;
-  position: absolute;
-  bottom: 17px;
-  left: 397px;
-}
-
-#scene-2 {
-  position: relative;
-  height: 100px;
-  padding: 30px;
-}
-
-#rppSamples {
-  margin-top: 60px;
-  margin-bottom: 60px;}
-#s1 {background-image: url('../img/Direct Mail/10000-7547_Comp(1).jpg');}
-#s2 {background-image: url('../img/Direct Mail/10000-8560_04.jpg');}
-#s3 {background-image: url('../img/Pop Ups/2918-021_12(2).jpg');}
-#s4 {background-image: url('../img/Pop Ups/10000-7345_3(1).jpg');}
-#s5 {background-image: url('../img/Promotional Packaging/2917-464_60(2).jpg');}
-#s6 {background-image: url('../img/Promotional Packaging/10000-7974_Comp.jpg');}
-#s7 {background-image: url('../img/Video/10000-7151_4(1).jpg');}
-#rppSamples .row div {
-  height: 320px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;}
-
-
-.buttons {
-  margin-top: 60px;
-}
-
-.buttons a.btn.btn-default {
-  background-color: rgb(236, 33, 39);
-  color: white;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  font-size: 1em;
-}
+  opacity: 0;
+  overflow: hidden; }
+#scene-1 > div {
+  position: relative;
+  text-align: center;
+  height: 50%;
+  height: 50vh; }
+#scene-1 #vert-rpplogo {
+  display: none; }
+#scene-1 #horiz-rpplogo {
+  width: auto;
+  height: 100%; }
+#scene-1 #plane {
+  width: 23%;
+  position: absolute;
+  top: 0;
+  right: 0; }
+#scene-1 .fn { font-size: 3em; }
 
+#scene-2, 
+#scene-3,
+#scene-4 {
+  font-size: 5em;
+  font-weight: 900;
+  text-align: center;
+  color: rgb(236, 33, 39);
+  display: none; }
+#scene-4 img { width: 70%; }
+
+#scene-5 {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  color: rgb(92, 184, 178);
+  text-align: center;
+  display: none; }
+#scene-5 > div { 
+  margin-left: 0; 
+  margin-right: 0; 
+  padding-left: 0; 
+  padding-right: 0; 
+  position: relative; }
+#scene-5 > div > div { padding: 0; }
+#scene-5 > div p { 
+  position: absolute;
+  width: 70%;
+  text-align: left;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  padding: 15px;
+  color: rgb(236, 33, 39);
+  background: rgb(141, 200, 232); }
+#scene-5 img { width: 100%; }
+#scene-5 .scroll {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(185,219,217);
+  background: rgba(0,0,0,0.5); }
+#scene-5 .glyphicon {
+  font-size: 2em; }
+
+#scene-6 { padding: 0 60px; }
+#scene-6 p { width: 100%; text-align: center; }
+#scene-6, #scene-7 { 
+  color: rgb(92, 184, 178); 
+  display: none; }
+#scene-7 { text-align: center; }
+#scene-7 > p { 
+  text-align: center; 
+  color: rgb(236, 33, 39); 
+  font-size: 2em; 
+  font-weight: bolder; 
+  width: 80%; 
+  margin: 15px auto; }
+.buttons {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+.buttons > div {
+  background: rgb(236, 33, 39);
+  min-width: 250px;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;}
+.buttons > div:hover {
+  cursor: pointer;
+  background: rgb(238, 75, 81); }
+.buttons > div > a { 
+  color: white;
+  font-weight: bold; }
+#smm {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 5em;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 30px 0; }
+#explore { font-weight: bold; }
+#explore span { cursor: pointer; }
+.bars { display: flex; transform: skewX(-30deg) translateX(10px); }
+.bars:nth-of-type(1) { align-self: flex-start; }
+.bars:nth-of-type(2) { align-self: flex-end; }
+.red-bar, .white-bar, .blue-bar { width: 2em; height: 3em; }
+.red-bar { background: rgb(236, 33, 39); }
+.white-bar { background: white; }
+.blue-bar { background: rgb(141, 200, 232); }
+
+@media screen and (max-width: 440px) and (orientation: portrait) {
+  #scene-1 #vert-rpplogo {
+    display: inline-block;
+    width: auto;
+    height: 100%; }
+  #scene-1 #horiz-rpplogo {
+    display: none; }
+  #scene-1 #plane { width: 30%; top: 3%; right: 12%; }
+  #scene-2, #scene-3, #scene-4 { font-size: 2em; }
+  #scene-4 img { width: 40%; }
+  #scene-5 > div p { 
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    color: rgb(236, 33, 39);
+    background: rgb(141, 200, 232); }
+  #scene-6 { 
+    justify-content: flex-start !important; 
+    padding: 0; 
+    background: #ffffff; }
+  #scene-6 > p { margin: 0; }
+  #scene-7 { justify-content: flex-start !important; }
+  #smm { font-size: 3em; }
+  .buttons { flex-direction: column; }
+  .bars:nth-of-type(1) { margin: 0 0 30px 0; }
+}

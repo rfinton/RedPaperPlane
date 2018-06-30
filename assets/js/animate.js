@@ -1,138 +1,103 @@
 $(document).ready(function() {
-  function planeflyout() {
-    var distance = (innerWidth / 2) + 110;
-    var plane2InitialOffset = (innerWidth / 2) + 110;
-    var rate = ((innerWidth / 2) / 400) * 1000;
-  
-    $('#plane-2, #shadow-2').css({
-      transform: 'translateX(' + plane2InitialOffset + 'px)',
-      display: 'inline-block'
-    });
-  
-    $('#plane-1').velocity({
-      translateX: [distance, 0]
-    }, {
-      duration: rate,
-      easing: 'easeInSine'
-    });
-  
-    $('#plane-2, #shadow-2').velocity({
-      translateX: [0, plane2InitialOffset]
-    }, {
-      delay: rate,
-      duration: rate,
-      easing: 'easeOutSine'
-    });
+  function exec() {
+    $('#scene-1').css('opacity', 1);
+    playScenes();
   }
   
-  function initMobileVersion() {
-    $('#mobile-scene-1').css('opacity', 1);
-    playMobileScenes();
+  function playScenes() {
+    setTimeout(scene1, 2000);
+    setTimeout(scene2, 4000);
+    setTimeout(scene3, 6000);
+    setTimeout(scene4, 8000);
+    setTimeout(scene6, 11000);
   }
   
-  function playMobileScenes() {
-    setTimeout(mobileScene1, 2000);
-    setTimeout(mobileScene2, 4000);
-    setTimeout(mobileScene3, 6000);
-    setTimeout(mobileScene4, 8000);
-    setTimeout(mobileScene5, 11000);
-  }
-  
-  function mobileScene1() {
-    $('#mobile-plane').velocity({
+  function scene1() {
+    $('#plane').velocity({
       translateX: [innerWidth * 0.7, 0]
-    }, {
-      duration: 1500,
-      easing: 'easeInSine'
+    }, { duration: 1000, easing: 'easeInSine' });
+  }
+  
+  function scene2() {
+    $('#scene-1').css('display', 'none');
+    $('#scene-2').velocity('transition.slideUpBigIn');
+  }
+  
+  function scene3() {
+    $('#scene-2').css('display', 'none');
+    $('#scene-3').velocity('transition.slideUpBigIn');
+  }
+  
+  function scene4() {
+    $('#scene-3').css('display', 'none');
+    $('#scene-4 img').velocity({ translateX: innerWidth }, { duration: 0 });
+    $('#scene-4').velocity('transition.slideUpBigIn');
+    $('#scene-4 img').velocity({ 
+      translateX: [0,innerWidth], 
+      translateZ: [0,0] 
+    }, { 
+      delay: 500, 
+      duration: 1000, 
+      easing: [200,18] 
     });
   }
   
-  function mobileScene2() {
-    $('#mobile-scene-1').css('display', 'none');
-    $('#mobile-scene-2').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
-      justifyContent: 'center'
-    });
-    $('#mobile-scene-2').velocity('transition.slideUpBigIn');
-  }
-  
-  function mobileScene3() {
-    $('#mobile-scene-2').css('display', 'none');
-    $('#mobile-scene-3').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
-      justifyContent: 'center'
-    });
-    $('#mobile-scene-3').velocity('transition.slideUpBigIn');
-  }
-  
-  function mobileScene4() {
-    $('#mobile-scene-3').css('display', 'none');
-    $('#mobile-scene-4').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
-      justifyContent: 'center'
-    });
-    $('#mobile-scene-4 img').velocity({ translateX: innerWidth }, { duration: 0 });
-    $('#mobile-scene-4').velocity('transition.slideUpBigIn');
-    $('#mobile-scene-4 img').velocity({ translateX: 0 }, { delay: 500, duration: 3000, easing: 'spring' });
-  }
-  
-  function mobileScene5() {
-    $('#mobile-scene-4').css('display', 'none');
-    $('#mobile-scene-5').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
-      flexDirection: 'column', 
-      justifyContent: 'center'
-    });
-    $('#mobile-scene-5').velocity({ opacity: [1,0] }, { duration: 2000 });
-  }
-  
-  function mobileScene6() {
-    console.log('running scene 6');
+  function scene5() {
+    function hideScroll() {
+      $('.scroll').velocity('fadeOut', 2000);
+      window.removeEventListener('scroll', hideScroll);
+    }
     scrollTo(0,0);
-    $('#mobile-scene-5').css('display', 'none');
-    $('#mobile-scene-6').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
-      flexDirection: 'column',
-      justifyContent: 'center'
-    });
-    $('#mobile-scene-6').velocity({ opacity: [1,0] }, { duration: 1000 });
+    $('#scene-6').css('display', 'none');
+    $('#scene-5').css({ display: 'block' });
+    $('#scene-5').velocity({ opacity: [1,0] }, { duration: 2000 });
+    setInterval(function() {
+      $('#scene-5 .glyphicon').velocity('callout.bounce');
+    }, 2000);
+
+    setTimeout(function() {
+      window.addEventListener('scroll', hideScroll);
+    }, 1000);
   }
   
-  function mobileScene7() {
-    $('#mobile-scene-6').css('display', 'none');
-    $('#mobile-scene-7').css({
-      opacity: 0,
-      display: 'flex',
-      flex: '100%',
+  function scene6() {
+    $('#scene-4').css('display', 'none');
+    scrollTo(0,0);
+    $('#scene-6').css({ 
+      opacity: 0, 
+      display: 'flex', 
+      flex: 1, 
       flexDirection: 'column',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%' 
     });
-    $('#mobile-scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
+    $('#scene-6').velocity({ opacity: [1,0] }, { duration: 1000 });
+    $('#bar-1 > div').velocity('transition.slideLeftIn', { stagger: 100 });
+    $('#bar-2 > div').velocity('transition.slideRightIn', { stagger: 100 });
+  }
+  
+  function scene7() {
+    $('#scene-5 .glyphicon').velocity('stop');
+    $('#scene-5').css('display', 'none');
+    $('#scene-7').css({ 
+      opacity: 0, 
+      display: 'flex', 
+      flex: 1, 
+      flexDirection: 'column',
+      justifyContent: 'center',
+      width: '100%' 
+    });
+    $('#scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
   }
   
   window.onload = function() {
-    $('#smm').click(mobileScene6);
-    $('#explore').click(mobileScene7);
-  
-    if(innerWidth > 732) {
-      setTimeout(planeflyout, 2000);
-    } else {
-      initMobileVersion();
-    }
+    $('#smm').click(scene7);
+    $('#explore').click(scene5);
+    $('.buttons > div').click(function() {
+      $(this).children('a')[0].click();
+    });
+    exec();
   };
-  
-  window.onresize = function() {
-    $('body').css('min-height', innerHeight + 'px');
-  }
 });
 
