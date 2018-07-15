@@ -65,6 +65,7 @@ h1 {
   display: none; }
 #scene-4 img { width: 70%; }
 
+
 #scene-5 {
   background: #ffffff;
   position: absolute;
@@ -108,6 +109,7 @@ h1 {
 
 #scene-6 { padding: 0 60px; }
 #scene-6 p { width: 100%; text-align: center; }
+#scene-6 a { color: rgb(236, 33, 39); }
 #scene-6, #scene-7 { 
   color: rgb(92, 184, 178); 
   display: none; }

@@ -90,14 +90,22 @@ $(document).ready(function() {
     });
     $('#scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
   }
+
+  function clickTracker(ev) {
+    ev.preventDefault();
+    var ifr = document.createElement('iframe');
+    ifr.style.display = 'none';
+    ifr.src = ev.currentTarget.href;
+    document.body.appendChild(ifr);
+  }
   
   window.onload = function() {
-    $('#smm').click(scene7);
-    $('#explore').click(scene5);
+    $('#explore a').click(scene5);
+    $('#smm a').click(scene7);
+    $('#explore a, #smm a').click(clickTracker);
     $('.buttons > div').click(function() {
       $(this).children('a')[0].click();
     });
     exec();
   };
 });
-
