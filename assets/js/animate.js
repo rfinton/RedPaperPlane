@@ -5,11 +5,12 @@ $(document).ready(function() {
   }
   
   function playScenes() {
-    setTimeout(scene1, 2000);
-    setTimeout(scene2, 4000);
-    setTimeout(scene3, 6000);
-    setTimeout(scene4, 8000);
-    setTimeout(scene6, 11000);
+    setTimeout(scene1, 1000);
+    setTimeout(scene2, 2000);
+    setTimeout(scene3, 3000);
+    setTimeout(scene4, 4000);
+    setTimeout(scene5, 5000);
+    setTimeout(scene7, 7000);
   }
   
   function scene1() {
@@ -27,12 +28,17 @@ $(document).ready(function() {
     $('#scene-2').css('display', 'none');
     $('#scene-3').velocity('transition.slideUpBigIn');
   }
-  
+
   function scene4() {
     $('#scene-3').css('display', 'none');
-    $('#scene-4 img').velocity({ translateX: innerWidth }, { duration: 0 });
     $('#scene-4').velocity('transition.slideUpBigIn');
-    $('#scene-4 img').velocity({ 
+  }
+  
+  function scene5() {
+    $('#scene-4').css('display', 'none');
+    $('#scene-5 img').velocity({ translateX: innerWidth }, { duration: 0 });
+    $('#scene-5').velocity('transition.slideUpBigIn');
+    $('#scene-5 img').velocity({ 
       translateX: [0,innerWidth], 
       translateZ: [0,0] 
     }, { 
@@ -42,17 +48,17 @@ $(document).ready(function() {
     });
   }
   
-  function scene5() {
+  function scene6() {
     function hideScroll() {
-      $('.scroll').velocity('fadeOut', 2000);
+      $('.scroll').velocity('fadeOut', 1000);
       window.removeEventListener('scroll', hideScroll);
     }
     scrollTo(0,0);
-    $('#scene-6').css('display', 'none');
-    $('#scene-5').css({ display: 'block' });
-    $('#scene-5').velocity({ opacity: [1,0] }, { duration: 2000 });
+    $('#scene-7').css('display', 'none');
+    $('#scene-6').css({ display: 'block' });
+    $('#scene-6').velocity({ opacity: [1,0] }, { duration: 2000 });
     setInterval(function() {
-      $('#scene-5 .glyphicon').velocity('callout.bounce');
+      $('#scene-6 .glyphicon').velocity('callout.bounce');
     }, 2000);
 
     setTimeout(function() {
@@ -60,10 +66,10 @@ $(document).ready(function() {
     }, 1000);
   }
   
-  function scene6() {
-    $('#scene-4').css('display', 'none');
+  function scene7() {
+    $('#scene-5').css('display', 'none');
     scrollTo(0,0);
-    $('#scene-6').css({ 
+    $('#scene-7').css({ 
       opacity: 0, 
       display: 'flex', 
       flex: 1, 
@@ -72,23 +78,26 @@ $(document).ready(function() {
       alignItems: 'center',
       width: '100%' 
     });
-    $('#scene-6').velocity({ opacity: [1,0] }, { duration: 1000 });
+    $('#scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
     $('#bar-1 > div').velocity('transition.slideLeftIn', { stagger: 100 });
     $('#bar-2 > div').velocity('transition.slideRightIn', { stagger: 100 });
   }
   
-  function scene7() {
-    $('#scene-5 .glyphicon').velocity('stop');
-    $('#scene-5').css('display', 'none');
-    $('#scene-7').css({ 
+  function scene8() {
+    $('#scene-6 .glyphicon').velocity('stop');
+    $('#scene-6').css('display', 'none');
+    scrollTo(0,0);
+    
+    if(innerWidth < 420)
+      $('.view').css('justify-content', 'flex-start');
+    
+      $('#scene-8').css({ 
       opacity: 0, 
-      display: 'flex', 
-      flex: 1, 
-      flexDirection: 'column',
-      justifyContent: 'center',
-      width: '100%' 
+      display: 'block',
+      width: '100%',
+      height: 'inherit',
     });
-    $('#scene-7').velocity({ opacity: [1,0] }, { duration: 1000 });
+    $('#scene-8').velocity({ opacity: [1,0] }, { duration: 1000 });
   }
 
   function clickTracker(ev) {
@@ -98,14 +107,58 @@ $(document).ready(function() {
     ifr.src = ev.currentTarget.href;
     document.body.appendChild(ifr);
   }
-  
-  window.onload = function() {
-    $('#explore a').click(scene5);
-    $('#smm a').click(scene7);
-    $('#explore a, #smm a').click(clickTracker);
-    $('.buttons > div').click(function() {
-      $(this).children('a')[0].click();
+
+  function sendForm() {
+    var proxyForm = document.getElementById('proxy-form');
+
+    if(!proxyForm['firstname'].value || !proxyForm['lastname'].value || !proxyForm['company'].value || !proxyForm['email'].value || !proxyForm['address1'].value || !proxyForm['city'].value || !proxyForm['state'].value || !proxyForm['zip'].value) {
+      return;
+    }
+
+    $('input[type="submit"]').css('display', 'none');
+    $('div.btn.refresh').toggleClass('hidden');
+    $('.glyphicon-refresh').velocity({ rotateZ: 360 },{ duration: 700, loop: true });
+
+    var ifr;
+    (purl != '') ? ifr = document.getElementById('hp') : ifr = document.getElementById('np');
+    ifr = ifr.contentWindow || ifr.contentDocument;
+    
+    if(ifr.document) {
+      
+      ifr.document.forms[0]['firstname'].value = proxyForm['firstname'].value;
+      ifr.document.forms[0]['lastname'].value = proxyForm['lastname'].value;
+      ifr.document.forms[0]['company'].value = proxyForm['company'].value;
+      ifr.document.forms[0]['title'].value = proxyForm['title'].value;
+      ifr.document.forms[0]['email'].value = proxyForm['email'].value;
+      ifr.document.forms[0]['phone'].value = proxyForm['phone'].value;
+      ifr.document.forms[0]['address1'].value = proxyForm['address1'].value;
+      ifr.document.forms[0]['city'].value = proxyForm['city'].value;
+      ifr.document.forms[0]['state'].value = proxyForm['state'].value;
+      ifr.document.forms[0]['zip'].value = proxyForm['zip'].value;
+      ifr.document.forms[0].submit();
+    }
+  }
+
+  function back() {
+    scrollTo(0,0);
+    $('#scene-8').css('display', 'none');
+    $('#scene-6').css({ display: 'block' });
+    $('#scene-6').velocity({ opacity: [1,0] }, { duration: 2000 });
+  }
+
+  window.end = function(fn) {
+    $('.view').velocity('transition.slideLeftOut', function() {
+      $('.view').html('<div class="flex-box"><p>' + fn + ", thank you for your interest in Red Paper Plane's Customer Success Kit. We look forward to getting this over to you.<br><br>If you would like to speak with someone sooner, please don't hesitate to <a href='https://www.redpaperplane.com/store/contact-us' target='_blank'>contact us</a> and we'll be happy to assist you.<br><br>In the meantime, click <a href='https://www.redpaperplane.com' target='_blank'>here</a> to visit our main website.</p></div>");
+      $('.view').velocity('transition.slideLeftIn');
     });
+  }
+
+  window.onload = function() {
+    $('#explore a').click(scene6);
+    $('.learn-more').click(scene8);
+    $('#back-btn').click(back);
+    $('#explore a, #smm a').click(clickTracker);
+    $('input[type=submit]').click(sendForm);
     exec();
   };
 });

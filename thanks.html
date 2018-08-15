@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function callback() {
+      var p = window.parent;
+      p.end();
+    }
+  </script>
+</head>
+<body onload="callback()">success</body>
+</html>

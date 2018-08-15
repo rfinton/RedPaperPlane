@@ -8,6 +8,17 @@ body {
   font-family: 'Raleway', sans-serif; }
 h1, h2, h3, .h1, .h2, .h3 { 
   color: rgb(236, 33, 39); }
+.flex-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(236, 33, 39);
+  font-size: 1.5em;
+  padding: 0 25%;
+  font-weight: bold;
+}
 
 .view {
   height: 100%;
@@ -39,34 +50,37 @@ h1 {
   opacity: 0;
   overflow: hidden; }
 #scene-1 > div {
+  width: 40%;
   position: relative;
-  text-align: center;
-  height: 50%;
-  height: 50vh; }
+  text-align: center; }
 #scene-1 #vert-rpplogo {
   display: none; }
 #scene-1 #horiz-rpplogo {
-  width: auto;
-  height: 100%; }
+  width: 100%; }
 #scene-1 #plane {
   width: 23%;
   position: absolute;
   top: 0;
   right: 0; }
-#scene-1 .fn { font-size: 3em; }
+#scene-1 p {
+  color: rgb(236, 33, 39);
+  font-weight: bold;
+  font-size: 3em; }
+
 
 #scene-2, 
 #scene-3,
-#scene-4 {
+#scene-4,
+#scene-5 {
   font-size: 5em;
   font-weight: 900;
   text-align: center;
   color: rgb(236, 33, 39);
   display: none; }
-#scene-4 img { width: 70%; }
+#scene-5 img { width: 70%; }
 
 
-#scene-5 {
+#scene-6 {
   background: #ffffff;
   position: absolute;
   top: 0;
@@ -77,25 +91,66 @@ h1 {
   color: rgb(92, 184, 178);
   text-align: center;
   display: none; }
-#scene-5 > div { 
-  margin-left: 0; 
-  margin-right: 0; 
+#scene-6 .row { margin: 0; }
+#scene-6 .row > div { 
   padding-left: 0; 
-  padding-right: 0; 
-  position: relative; }
-#scene-5 > div > div { padding: 0; }
-#scene-5 > div p { 
-  position: absolute;
-  width: 70%;
-  text-align: left;
-  top: 0;
-  left: 0;
-  margin: 12px;
+  padding-right: 0; }
+#scene-6 .row .dm-panel { 
+  padding-top: 15px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0; }
+#scene-6 p {
+  margin: 0;
+  width: 60%;
   padding: 15px;
-  color: rgb(236, 33, 39);
-  background: rgb(141, 200, 232); }
-#scene-5 img { width: 100%; }
-#scene-5 .scroll {
+  text-align: left;
+  background-color: rgba(92, 184, 178, 0.7);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px dimgray;
+  font-weight: bold; }
+#scene-6 img { 
+  display: none;
+  width: 100%; }
+#scene-6 .glyphicon {
+  font-size: 2em; }
+#scene-6 .btn.learn-more {
+  font-family: 'Raleway', sans-serif; }
+.dm-panel {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+.dm-panel > div {
+  width: 60%;
+  margin: 0;
+  padding-bottom: 15px;
+  background-color: rgba(92, 184, 178, 0.7); }
+#scene-6 label { font-size: 16px; }
+#surprise-slider {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/2918-021_12(2).jpg'); }
+#video-telescoping {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-8349_05.jpg'); }
+#center-pop {
+  height: 840px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/CenterPop.jpg'); }
+#well-box {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/10000-7974_Comp.jpg'); }
+#video-center {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-7151_4(1).jpg'); }
+#pop-up-cube {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/10000-7345_3(1).jpg'); }
+#picture-slider {
+  height: 420px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/magic_slider.jpg'); }
+#fall-away-box {
+  height: 840px;
+  background-image: url('https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/2917-464_60(2).jpg'); }
+#scene-6 .scroll {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -104,48 +159,82 @@ h1 {
   font-size: 1.5em;
   color: rgb(185,219,217);
   background: rgba(0,0,0,0.5); }
-#scene-5 .glyphicon {
-  font-size: 2em; }
 
-#scene-6 { padding: 0 60px; }
-#scene-6 p { width: 100%; text-align: center; }
-#scene-6 a { color: rgb(236, 33, 39); }
-#scene-6, #scene-7 { 
+
+
+#scene-7 { 
   color: rgb(92, 184, 178); 
-  display: none; }
-#scene-7 { text-align: center; }
-#scene-7 > p { 
-  text-align: center; 
-  color: rgb(236, 33, 39); 
-  font-size: 2em; 
-  font-weight: bolder; 
-  width: 80%; 
-  margin: 15px auto; }
-.buttons {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-.buttons > div {
+  display: none;
+  padding: 0 60px; }
+#scene-7 p { 
+  color: rgb(92, 184, 178); 
+  font-size: 1.5em; 
+  padding: 30px 30px 0; 
+  font-weight: normal; 
+  text-align: left;
+  width: 100%; }
+#scene-7 a { color: rgb(236, 33, 39); }
+
+
+#scene-8 {
+  display: none;
+  color: rgb(92, 184, 178); 
+  text-align: center; }
+#scene-8 > p {
+  width: 60%;
+  margin: auto;
+  background-color: rgb(92, 184, 178);
+  font-size: 1.5em; 
+  color: #ffffff;
+  padding: 30px;
+  font-weight: normal;
+  text-align: left; }
+#scene-8 form {
+  padding: 30px;
+  text-align: left;
+  width: 60%;
+  margin: auto; }
+#scene-8 .form-control {
+  margin-bottom: 12px; }
+#scene-8 input[type="submit"] {
+  white-space: inherit;
+  padding: 30px;
+  margin-top: 30px;
   background: rgb(236, 33, 39);
-  min-width: 250px;
-  padding: 15px;
-  margin: 15px;
-  text-align: center;}
-.buttons > div:hover {
-  cursor: pointer;
-  background: rgb(238, 75, 81); }
-.buttons > div > a { 
-  color: white;
-  font-weight: bold; }
-#smm {
-  text-decoration: underline;
-  text-align: center;
-  font-size: 5em;
-  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  padding: 30px 0; }
+  font-size: 1.5em; }
+#scene-8 input[type="submit"]:focus {
+  background: #4e4a4a; }
+#scene-8 .btn.refresh {
+  white-space: inherit;
+  padding: 30px;
+  margin-top: 30px;
+  background: #4e4a4a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em; }
+#scene-8 .btn.refresh:hover {
+  color: rgb(92, 184, 178); }
+#scene-8 #testimony {
+  width: 70%;
+  margin: 0 auto 60px; }
+#scene-8 #testimony ul {
+  width: 80%;
+  margin: auto;
+  text-align: left; }
+#scene-8 #testimony ul li {
+  font-style: italic;
+  margin: 12px 0;
+  font-size: 1.5em;
+  background: rgb(92, 184, 178);
+  color: #ffffff;
+  padding: 12px; }
+#scene-8 div#back-btn {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 #explore { font-weight: bold; }
 #explore span { cursor: pointer; }
 .bars { display: flex; transform: skewX(-30deg) translateX(10px); }
@@ -156,30 +245,52 @@ h1 {
 .white-bar { background: white; }
 .blue-bar { background: rgb(141, 200, 232); }
 
+
+
 @media screen and (max-width: 440px) and (orientation: portrait) {
+  #scene-1 p { font-size: 1.5em; }
+  #scene-1 > div { width: 80%; }
   #scene-1 #vert-rpplogo {
-    display: inline-block;
-    width: auto;
-    height: 100%; }
+    display: inline-block; }
   #scene-1 #horiz-rpplogo {
     display: none; }
   #scene-1 #plane { width: 30%; top: 3%; right: 12%; }
-  #scene-2, #scene-3, #scene-4 { font-size: 2em; }
-  #scene-4 img { width: 40%; }
-  #scene-5 > div p { 
-    position: relative;
+  #scene-2, #scene-3, #scene-4, #scene-5 { font-size: 2em; }
+  #scene-5 img { width: 40%; }
+
+  #scene-6 .row .dm-panel {
+    padding-top: 0; }
+  #scene-6 p, #scene-6 div {
     width: 100%;
-    margin: 0;
-    padding: 15px;
-    color: rgb(236, 33, 39);
-    background: rgb(141, 200, 232); }
-  #scene-6 { 
+    background-color: rgb(92, 184, 178); }
+  #scene-6 img { display: inline; }
+  #surprise-slider,
+  #video-telescoping,
+  #center-pop,
+  #well-box,
+  #video-center,
+  #pop-up-cube,
+  #picture-slider,
+  #fall-away-box {
+    height: initial; }
+
+
+  #scene-7 { 
     justify-content: flex-start !important; 
     padding: 0; 
     background: #ffffff; }
-  #scene-6 > p { margin: 0; }
-  #scene-7 { justify-content: flex-start !important; }
-  #smm { font-size: 3em; }
-  .buttons { flex-direction: column; }
   .bars:nth-of-type(1) { margin: 0 0 30px 0; }
+  #scene-7 > p {
+    margin: 0; }
+  #scene-8 {
+    flex: 1 1 1px !important;
+    justify-content: flex-start !important; }
+  #scene-8 form {
+    width: 100%; }
+  #scene-8 p, 
+  #scene-8 #testimony,
+  #scene-8 #testimony ul { width: 100%; }
+  #scene-8 #testimony ul { padding-left: 0; }
+  #scene-8 p:first-of-type { margin-top: 46px; }
+  #scene-8 #back-btn, #scene-8 #back-btn a { width: 100%; }
 }
