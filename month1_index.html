@@ -13,6 +13,8 @@
   <script>
     var purl = "##purl##";
     var fn = "##firstname##";
+    var clickedOn = "##clicked_on##";
+    (clickedOn != "") ? clickedOn = ("##clicked_on##").split(",") : clickedOn = [];
     
     (function() {
       var h = innerHeight;
@@ -75,21 +77,30 @@
     <div id="scene-6">
       <div class="row">
         <div class="col-xs-12 col-sm-7">
+
           <div class="dm-panel" id="surprise-slider">
             <p><label>Surprise Slider</label><br>The layout of the Surprise Slider provides plenty of space for content on the box sleeve and, the inside pull out and both pop up cubes. The box is rigid with EPS FOAM inside so it's a self-mailing piece. No need for an outer box.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="surprise_slider" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/2918-021_12(2).jpg">
           </div>
+
           <div class="dm-panel" id="video-telescoping">
             <p><label>Video Screen - Telescoping Slider</label><br>Sliding the sleeve on the brochure reveals a video screen on the inside that, once opened, plays your content automatically. Including video with one of our high-impacted printed formats is a powerful combination!</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="video_screen_slider_1" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-8349_05.jpg">
           </div>
         </div>
+
         <div class="col-xs-12 col-sm-5">
           <div class="dm-panel" id="center-pop">
             <p><label>Center Pop</label><br>Make a stand&mdash;literally. This rubber-band activated product ships flat and, once released from its base, pops up and locks into place, taking its fully dimensional table-top shape.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="center_pop" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/CenterPop.jpg">
           </div>
         </div>
@@ -99,14 +110,19 @@
         <div class="col-xs-12 col-sm-6">
           <div class="dm-panel" id="well-box">
             <p><label>Small Well Box</label><br>This sturdy design opens endless possibilities for your branded promotional items. The layout of the Well Box provides plenty of real estate for content. Insert any marketing collateral or promotional product that fits within the 5.25" X 3.125" X 1 15/16" size well.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="well_box" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/10000-7974_Comp.jpg">
           </div>
         </div>
+
         <div class="col-xs-12 col-sm-6">
           <div class="dm-panel" id="video-center">
             <p><label>Video Screen - Center Reveal</label><br>This sliding brochure with half-split sleeve pulls open to reveal a built-in video screen which plays automatically. This product has 95MB of available video storage. Deliver your marketing message with dramatic video and sound!</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="video_screen_slider_2" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Video/10000-7151_4(1).jpg">
           </div>
         </div>
@@ -116,19 +132,27 @@
         <div class="col-xs-12 col-sm-5">
           <div class="dm-panel" id="fall-away-box">
             <p><label>Fall Away Box</label><br>This box is an excellent choice for promotional items and is built to endure heavy postage handling. With an easy-to-design template to unleash your creative potential, this high-end piece will help your brand stand out from the clutter.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="fall_away_box" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Promotional Packaging/2917-464_60(2).jpg">
           </div>
         </div>
+
         <div class="col-xs-12 col-sm-7">
           <div class="dm-panel" id="pop-up-cube">
             <p><label>3" Pop Up Cube Self Mailer</label><br>This highly effective dimensional mailer mails as flat and pops open when unsealed. This design is both fun and cost effective. A special semi-gloss UV coating is applied that both enhances the quality of printing and acts as a protective layer.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="popup_cube" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/Pop Ups/10000-7345_3(1).jpg">
           </div>
+
           <div class="dm-panel" id="picture-slider">
             <p><label>Magic Changing Picture</label><br>Pull the sliding tab and watch the content and messaging change before your eyes. This fun and interactive piece is guaranteed to make a lasting impression on your audience.</p>
-            <div><button class="btn btn-default learn-more">Learn more</button></div>
+            <div>
+              <a class="btn btn-default learn-more" id="magic_changing_picture" href="!#">Learn more</a>
+            </div>
             <img src="https://s3.amazonaws.com/redpaperplane/assets/img/magic_slider.jpg">
           </div>
         </div>
@@ -160,9 +184,7 @@
 
       ##scene7##
       
-      <p id="explore" style="padding:30px; font-size:3em; text-align:center;">
-        <a href="http://redalwaysstandsout.com/##purl##/clicked.html?l=Month1_Show_Me">Show Me &#9654;</a>
-      </p>
+      <a id="show_me" href="!#">Show Me &#9654;</a>
 
       <div class="bars" id="bar-2">
         <div class="red-bar"></div>
@@ -259,12 +281,14 @@
     <div class="hidden">
       <iframe id="hp" src="http://##purl##.redstandsout.com/form_hp.html"></iframe>
       <iframe id="np" src="http://www.redstandsout.com/form_np.html"></iframe>
+      <iframe id="tk" src="http://##purl##.redstandsout.com/track.html"></iframe>
     </div>
   </div>
 
   <script src="https://s3.amazonaws.com/redpaperplane/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="https://s3.amazonaws.com/redpaperplane/node_modules/velocity/velocity.min.js"></script>
   <script src="https://s3.amazonaws.com/redpaperplane/node_modules/velocity/velocity.ui.min.js"></script>
+  <script src="https://s3.amazonaws.com/redpaperplane/assets/js/goals.js"></script>
   <script src="https://s3.amazonaws.com/redpaperplane/assets/js/animate.js"></script>
 </body>
 </html>

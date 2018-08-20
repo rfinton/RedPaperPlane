@@ -48,7 +48,7 @@ $(document).ready(function() {
     });
   }
   
-  function scene6() {
+  function scene6(ev) {
     function hideScroll() {
       $('.scroll').velocity('fadeOut', 1000);
       window.removeEventListener('scroll', hideScroll);
@@ -57,6 +57,9 @@ $(document).ready(function() {
     $('#scene-7').css('display', 'none');
     $('#scene-6').css({ display: 'block' });
     $('#scene-6').velocity({ opacity: [1,0] }, { duration: 2000 });
+
+    postGoal(ev);
+
     setInterval(function() {
       $('#scene-6 .glyphicon').velocity('callout.bounce');
     }, 2000);
@@ -83,7 +86,7 @@ $(document).ready(function() {
     $('#bar-2 > div').velocity('transition.slideRightIn', { stagger: 100 });
   }
   
-  function scene8() {
+  function scene8(ev) {
     $('#scene-6 .glyphicon').velocity('stop');
     $('#scene-6').css('display', 'none');
     scrollTo(0,0);
@@ -98,14 +101,8 @@ $(document).ready(function() {
       height: 'inherit',
     });
     $('#scene-8').velocity({ opacity: [1,0] }, { duration: 1000 });
-  }
 
-  function clickTracker(ev) {
-    ev.preventDefault();
-    var ifr = document.createElement('iframe');
-    ifr.style.display = 'none';
-    ifr.src = ev.currentTarget.href;
-    document.body.appendChild(ifr);
+    postGoal(ev);
   }
 
   function sendForm() {
@@ -124,7 +121,6 @@ $(document).ready(function() {
     ifr = ifr.contentWindow || ifr.contentDocument;
     
     if(ifr.document) {
-      
       ifr.document.forms[0]['firstname'].value = proxyForm['firstname'].value;
       ifr.document.forms[0]['lastname'].value = proxyForm['lastname'].value;
       ifr.document.forms[0]['company'].value = proxyForm['company'].value;
@@ -154,10 +150,16 @@ $(document).ready(function() {
   }
 
   window.onload = function() {
-    $('#explore a').click(scene6);
-    $('.learn-more').click(scene8);
+    $('#scene-7 a').click(function(ev) {
+      ev.preventDefault();
+      scene6(ev);
+    });
+
+    $('#scene-6 .learn-more').click(function(ev) {
+      ev.preventDefault();
+      scene8(ev);
+    });
     $('#back-btn').click(back);
-    $('#explore a, #smm a').click(clickTracker);
     $('input[type=submit]').click(sendForm);
     exec();
   };
